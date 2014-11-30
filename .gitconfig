@@ -29,8 +29,6 @@
   s = status
   undo = reset --soft HEAD~1
   vi = !vi
-[color]
-  ui = true
 [core]
   autocrlf = input
 [diff]
