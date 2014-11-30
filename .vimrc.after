@@ -2,4 +2,3 @@ set autowrite
 set clipboard=unnamedplus
 set makeprg=fish\ %
 set wrap
-
