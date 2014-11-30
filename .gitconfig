@@ -1,0 +1,45 @@
+[alias]
+  amend = commit --amend
+  a = add
+  b = branch
+  ca = commit -a -m
+  cd = !cd
+  clear = !git reset --hard HEAD && git clean -df && git pull
+  cl = clone
+  co = checkout
+  cp = cherry-pick
+  c = commit -m
+  discard = reset --hard HEAD
+  dt = difftool
+  d = diff
+  lm = log --abbrev-commit --pretty=oneline --author='Łukasz Wieczorek'
+  lsb = branch -a
+  ls = !ls
+  l = log --abbrev-commit --pretty=oneline
+  mes = log -n 1 --pretty=format:%s
+  mt = mergetool
+  m = merge
+  nb = checkout -b
+  pm = push origin master
+  pu = pull origin
+  p = push origin
+  rc = rm --cached
+  reset = reset HEAD --
+  r = !trash
+  s = status
+  undo = reset --soft HEAD~1
+  vi = !vi
+[color]
+  ui = true
+[core]
+  autocrlf = input
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[merge]
+  tool = meld
+[push]
+  default = current
+[user]
+  name = 'Łukasz Wieczorek'
