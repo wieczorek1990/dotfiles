@@ -35,6 +35,8 @@
   tool = meld
 [difftool]
   prompt = false
+[include]
+  path = ~/.gitemail
 [merge]
   tool = meld
 [push]
