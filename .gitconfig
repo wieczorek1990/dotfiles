@@ -1,9 +1,9 @@
 [alias]
   amend = commit --amend
+  authors = !git log --all --format='%cN <%cE>' | sort -u
   a = add
   b = branch
   ca = commit -a -m
-  cd = !cd
   clear = !git reset --hard HEAD && git clean -df && git pull
   cl = clone
   co = checkout
@@ -14,7 +14,6 @@
   d = diff
   lm = log --abbrev-commit --pretty=oneline --author='Łukasz Wieczorek'
   lsb = branch -a
-  ls = !ls
   l = log --abbrev-commit --pretty=oneline
   mes = log -n 1 --pretty=format:%s
   mt = mergetool
@@ -25,10 +24,8 @@
   p = push origin
   rc = rm --cached
   reset = reset HEAD --
-  r = !trash
   s = status
   undo = reset --soft HEAD~1
-  vi = !vi
 [core]
   autocrlf = input
 [diff]
