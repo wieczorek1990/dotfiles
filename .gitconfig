@@ -2,6 +2,8 @@
   amend = commit --amend
   authors = !git log --all --format='%cN <%cE>' | sort -u
   a = add
+  bn = checkout -b
+  br = branch -m
   b = branch
   ca = commit -a -m
   clear = !git reset --hard HEAD && git clean -df && git pull
@@ -18,7 +20,6 @@
   mes = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
-  nb = checkout -b
   pm = push origin master
   pu = pull origin
   p = push origin

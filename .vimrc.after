@@ -1,4 +1,11 @@
+color solarized
 set autowrite
 set clipboard=unnamedplus
 set makeprg=fish\ %
 set wrap
+if $TERM =~ '^screen-256color'
+  map <Esc>OH <Home>
+  map! <Esc>OH <Home>
+  map <Esc>OF <End>
+  map! <Esc>OF <End>
+endif
