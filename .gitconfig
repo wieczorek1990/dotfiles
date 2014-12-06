@@ -16,7 +16,8 @@
   d = diff
   lm = log --abbrev-commit --pretty=oneline --author='Łukasz Wieczorek'
   lsb = branch -a
-  l = log --abbrev-commit --pretty=oneline
+  ls = log --abbrev-commit --pretty=oneline
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   mes = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
