@@ -12,20 +12,26 @@
   cl = clone
   co = checkout
   cp = cherry-pick
-  c = commit -m
+  cm = commit -m
+  c = commit
   discard = reset --hard HEAD
   dt = difftool
   d = diff
   lm = log --abbrev-commit --pretty=oneline --author='Łukasz Wieczorek'
-  br = branch -a
-  l = log --abbrev-commit --pretty=oneline
+  ba = branch -a
+  bm = branch -m
+  bn = branch -n
+  br = branch -r
+  b = branch
+  ls = log --abbrev-commit --pretty=oneline
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   mes = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
   pm = push origin master
   pu = pull origin
   p = push origin
-  rc = rm --cached
+  rc = rm -r --cached
   reset = reset HEAD --
   s = status
   undo = reset --soft HEAD~1
