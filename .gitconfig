@@ -9,6 +9,7 @@
   b = branch
   ca = commit -a -m
   clear = !git reset --hard HEAD && git clean -df && git pull
+  cln = checkout -- .
   cl = clone
   co = checkout
   cp = cherry-pick
@@ -17,13 +18,8 @@
   discard = reset --hard HEAD
   dt = difftool
   d = diff
-  lm = log --abbrev-commit --pretty=oneline --author='Łukasz Wieczorek'
-  ba = branch -a
-  bm = branch -m
-  bn = branch -n
-  br = branch -r
-  b = branch
-  ls = log --abbrev-commit --pretty=oneline
+  lm = log --graph --oneline --decorate --author='Łukasz Wieczorek'
+  ls = log --graph --oneline --decorate
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   mes = log -n 1 --pretty=format:%s
   mt = mergetool
