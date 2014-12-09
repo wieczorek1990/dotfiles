@@ -31,6 +31,7 @@
   rst = reset HEAD --
   s = status
   undo = reset --soft HEAD~1
+  up = branch --set-upstream-to
 [core]
   autocrlf = input
 [diff]
