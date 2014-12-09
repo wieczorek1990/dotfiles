@@ -3,32 +3,32 @@
   authors = !git log --all --format='%cN <%cE>' | sort -u
   a = add
   ba = branch -a
+  bd = branch -d
   bm = branch -m
   bn = checkout -b
   br = branch -r
   b = branch
   ca = commit -a -m
-  clear = !git reset --hard HEAD && git clean -df && git pull
-  cln = checkout -- .
+  cln = clean -df
+  clr = checkout -- .
   cl = clone
   co = checkout
   cp = cherry-pick
   cm = commit -m
   c = commit
-  discard = reset --hard HEAD
   dt = difftool
   d = diff
   lm = log --graph --oneline --decorate --author='Łukasz Wieczorek'
   ls = log --graph --oneline --decorate
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  mes = log -n 1 --pretty=format:%s
+  msg = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
   pm = push origin master
   pu = pull origin
   p = push origin
   rc = rm -r --cached
-  reset = reset HEAD --
+  rst = reset HEAD --
   s = status
   undo = reset --soft HEAD~1
 [core]
