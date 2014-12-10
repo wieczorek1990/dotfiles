@@ -7,6 +7,7 @@
   bm = branch -m
   bn = checkout -b
   br = branch -r
+  bup = branch --set-upstream-to origin
   b = branch
   ca = commit -a -m
   cln = clean -df
@@ -24,6 +25,7 @@
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
+  pf = push -u origin
   pm = push origin master
   pop = stash pop
   pu = pull origin
