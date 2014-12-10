@@ -25,10 +25,12 @@
   mt = mergetool
   m = merge
   pm = push origin master
+  pop = stash pop
   pu = pull origin
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
+  sts = stash
   s = status
   undo = reset --soft HEAD~1
 [core]
