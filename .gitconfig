@@ -19,7 +19,7 @@
   c = commit
   dt = difftool
   d = diff
-  lm = log --graph --oneline --decorate --author='Łukasz Wieczorek'
+  lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
   ls = log --graph --oneline --decorate
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   msg = log -n 1 --pretty=format:%s
@@ -32,6 +32,7 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
+  stl = stash list
   sts = stash
   s = status
   undo = reset --soft HEAD~1
