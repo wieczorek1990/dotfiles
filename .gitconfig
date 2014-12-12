@@ -1,6 +1,5 @@
 [alias]
   amend = commit --amend
-  apply = stash apply
   authors = !git log --all --format='%cN <%cE>' | sort -u
   a = add
   ba = branch -a
@@ -11,7 +10,6 @@
   bup = branch --set-upstream-to origin
   b = branch
   ca = commit -a -m
-  clear = stash clear
   cln = clean -df
   clr = checkout -- .
   cl = clone
@@ -21,7 +19,6 @@
   c = commit
   dt = difftool
   d = diff
-  list = stash list
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
   ls = log --graph --oneline --decorate
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -31,15 +28,16 @@
   orig = "f() { dir=~/Projects/orig/`date`; mkdir -p $dir; find . -name '*.orig' | parallel -X mv '{}' $dir; }; f"
   pf = push -u origin
   pm = push origin master
-  pop = stash pop
   pu = pull origin
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
-  stl = stash list
-  sts = stash
+  sa = stash apply
+  sl = stash list
+  sp = stash pop
+  st = stash
+  sua = !git stash show -p | git apply -R
   s = status
-  unapply = !git stash show -p | git apply -R
   undo = reset --soft HEAD~1
 [core]
   autocrlf = input
