@@ -1,5 +1,5 @@
-[alias]
   amend = commit --amend
+[alias]
   authors = !git log --all --format='%cN <%cE>' | sort -u
   a = add
   ba = branch -a
@@ -33,7 +33,7 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
-  sta = stash applay
+  sta = stash apply
   std = stash drop
   stl = stash list
   stp = stash pop
