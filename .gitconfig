@@ -4,6 +4,7 @@
   a = add
   ba = branch -a
   bd = branch -d
+  bdd = branch -D
   bm = branch -m
   bn = checkout -b
   br = branch -r
@@ -32,11 +33,13 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
-  sa = stash apply
-  sl = stash list
-  sp = stash pop
+  sta = stash applay
+  std = stash drop
+  stl = stash list
+  stp = stash pop
+  sts = stash save
   st = stash
-  sua = !git stash show -p | git apply -R
+  stua = !git stash show -p | git apply -R
   s = status
   undo = reset --soft HEAD~1
 [core]
