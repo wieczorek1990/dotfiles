@@ -18,6 +18,7 @@
   cp = cherry-pick
   cm = commit -m
   c = commit
+  ds = diff stash@{0}
   dt = difftool
   d = diff
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative

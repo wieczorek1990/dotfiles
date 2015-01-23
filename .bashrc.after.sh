@@ -49,6 +49,8 @@ complete -F _apt_complete simp
 export EDITOR='vi'
 export HISTFILESIZE=
 export HISTSIZE=
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
+export PATH=${JAVA_HOME}:${PATH}
 export PROMPT_COMMAND='history -a; history -n'
 
 _apt_complete() {
