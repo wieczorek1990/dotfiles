@@ -47,6 +47,7 @@ complete -F _apt_complete simi
 complete -F _apt_complete simp
 
 export EDITOR='vi'
+export GOROOT=/opt/go
 export HISTFILESIZE=
 export HISTSIZE=
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25

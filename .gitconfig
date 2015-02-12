@@ -30,6 +30,7 @@
   orig = "f() { dir=~/Projects/orig/`date`; mkdir -p $dir; find . -name '*.orig' | parallel -X mv '{}' $dir; }; f"
   pf = push -u origin
   pm = push origin master
+  pr = pull --rebase origin
   pu = pull origin
   p = push origin
   rc = rm -r --cached
