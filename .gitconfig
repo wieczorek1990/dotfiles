@@ -16,6 +16,7 @@
   cl = clone
   co = checkout
   cp = cherry-pick
+  cnc = reset @^
   cm = commit -m
   c = commit
   ds = diff stash@{0}
