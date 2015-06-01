@@ -36,10 +36,10 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
-  sta = stash apply
+  sta = stash apply --index
   std = stash drop
   stl = stash list
-  stp = stash pop
+  stp = stash pop --index
   sts = stash save
   st = stash
   stua = !git stash show -p | git apply -R
