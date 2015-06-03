@@ -33,6 +33,7 @@
   pm = push origin master
   pr = pull --rebase origin
   pu = pull origin
+  puc = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git pull origin $HEAD; }; f"
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
