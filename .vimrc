@@ -1,3 +1,7 @@
+syntax enable
+set background=light
+colorscheme solarized
+
 set autowrite
 set clipboard=unnamedplus
 set makeprg=fish\ %
