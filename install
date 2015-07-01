@@ -1,3 +1,4 @@
 #!/bin/bash
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-cp -r $DIR/.* ~
+cd "$DIR"
+cp -r .gitconfig .inputrc .octaverc .terminfo .vimrc.after ~
