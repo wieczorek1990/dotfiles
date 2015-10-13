@@ -46,7 +46,7 @@
   stua = !git stash show -p | git apply -R
   s = status
   undo = reset --soft HEAD~1
-  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co develop && git pu application && git pu $HEAD; git p; }; f"
+  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co develop && git pu develop && git pu $HEAD; git p; }; f"
 [core]
   autocrlf = input
 [diff]
