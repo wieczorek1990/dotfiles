@@ -11,6 +11,7 @@
   bup = branch --set-upstream-to origin
   b = branch
   ca = commit -a -m
+  chx = update-index --chmod=+x
   cln = clean -df
   clr = checkout -- .
   cl = clone
@@ -33,7 +34,8 @@
   pm = push origin master
   pr = pull --rebase origin
   pu = pull origin
-  puc = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git pull origin $HEAD; }; f"
+  pc = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git pull origin $HEAD; }; f"
+  pl = pull .
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
@@ -56,8 +58,13 @@
 [include]
   path = ~/.gitemail
 [merge]
-  tool = meld
+  tool = mymeld
+  conflictstyle = diff3
+[mergetool]
+  keepBackup = false
+[mergetool "mymeld"]
+  cmd = meld $LOCAL $BASE $REMOTE --output $MERGED
 [push]
   default = current
 [user]
-  name = 'Łukasz Wieczorek'
+	name = Łukasz Wieczorek
