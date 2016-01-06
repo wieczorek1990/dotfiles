@@ -20,6 +20,7 @@
   cnc = reset @^
   cm = commit -m
   c = commit
+  dc = diff --cached
   ds = diff stash@{0}
   dt = difftool
   d = diff
