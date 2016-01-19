@@ -58,6 +58,7 @@
   prompt = false
 [include]
   path = ~/.gitemail
+  path = ~/.gitlocal
 [merge]
   tool = mymeld
   conflictstyle = diff3
