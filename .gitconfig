@@ -40,6 +40,7 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
+  short = rev-parse --short
   sta = stash apply --index
   std = stash drop
   stl = stash list
@@ -49,9 +50,10 @@
   stua = !git stash show -p | git apply -R
   s = status
   undo = reset --soft HEAD~1
-  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co develop && git pu develop && git pu $HEAD; git p; }; f"
+  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git co develop && git pu develop && git pu $HEAD; git p; }; f"
 [core]
   autocrlf = input
+  fileMode = false
 [diff]
   tool = meld
 [difftool]
