@@ -27,7 +27,7 @@
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
   ls = log --graph --oneline --decorate
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  master = !git co master && git pu && git pl develop && git p && git co dev    elop 
+  master = !git co master && git pu && git pl develop && git p && git co develop
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
   m = merge
@@ -51,7 +51,8 @@
   stua = !git stash show -p | git apply -R
   s = status
   undo = reset --soft HEAD~1
-  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git co develop && git pu develop && git pu $HEAD; git p; }; f"
+  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co develop && git pu develop && git pu $HEAD; git p; }; f"
+  upm = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co master && git pu master && git pu $HEAD; git p; }; f"
 [core]
   autocrlf = input
   fileMode = false
