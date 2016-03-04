@@ -1,6 +1,4 @@
-set clipboard=unnamedplus
-set makeprg=fish\ %
-set wrap
+highlight ColorColumn ctermbg=gray
 
 noremap  <Up> ""
 noremap! <Up> <Esc>
@@ -10,4 +8,9 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+
+set clipboard=unnamedplus
+set colorcolumn=120
+set makeprg=fish\ %
+set wrap
 
