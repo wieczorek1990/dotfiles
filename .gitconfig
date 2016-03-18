@@ -41,6 +41,7 @@
   p = push origin
   rc = rm -r --cached
   rst = reset HEAD --
+  rrst = "!f() { HEAD=`git rev-parse --abbrev-ref HEAD`; git reset --hard \"origin/$HEAD\"; }; f"
   short = rev-parse --short
   sta = stash apply --index
   std = stash drop
