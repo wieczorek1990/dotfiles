@@ -1,0 +1,6 @@
+partial modifier_keys
+xkb_symbols "caps_and_esc" {
+  replace key <CAPS>  { [ Escape ] };
+  replace key <ESC> { [ Super_L ] };
+};
+
