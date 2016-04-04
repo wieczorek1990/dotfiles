@@ -12,7 +12,7 @@
   b = branch
   ca = commit -a -m
   chx = update-index --chmod=+x
-  cln = clean -df
+  cln = clean -dfx
   clr = checkout -- .
   cl = clone
   co = checkout
@@ -62,7 +62,7 @@
 [difftool]
   prompt = false
 [include]
-  path = ~/.gitemail
+  path = ~/.gituser
   path = ~/.gitlocal
 [merge]
   tool = mymeld
@@ -73,5 +73,3 @@
   cmd = meld $LOCAL $BASE $REMOTE --output $MERGED
 [push]
   default = current
-[user]
-  name = Łukasz Wieczorek
