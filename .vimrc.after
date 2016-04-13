@@ -11,6 +11,4 @@ noremap! <Right> <Esc>
 
 set clipboard=unnamedplus
 set colorcolumn=120
-set makeprg=fish\ %
 set wrap
-
