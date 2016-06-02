@@ -1,4 +1,4 @@
-partial modifier_keys
+partial alphanumeric_keys modifier_keys
 xkb_symbols "myswap" {
   replace key <CAPS> { [ Escape ] };
   replace key <ESC> { [ Super_L ] };
