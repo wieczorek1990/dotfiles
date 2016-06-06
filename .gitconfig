@@ -16,6 +16,7 @@
   clr = checkout -- .
   cl = clone
   co = checkout
+  con = contains --contains
   cp = cherry-pick
   cnc = reset @^
   cm = commit -m
