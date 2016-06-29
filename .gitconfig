@@ -12,7 +12,7 @@
   b = branch
   ca = commit -a -m
   chx = update-index --chmod=+x
-  cln = clean -dfx
+  clean = clean -dfx
   clr = checkout -- .
   cl = clone
   co = checkout
@@ -45,7 +45,7 @@
   ra = rebase --abort
   rc = rebase --continue
   re = checkout HEAD --
-  ri = rebase --interactive
+  ri = rebase --interactive --committer-date-is-author-date
   rmc = rm -r --cached
   rst = reset HEAD --
   rrst = "!f() { HEAD=`git rev-parse --abbrev-ref HEAD`; git reset --hard \"origin/$HEAD\"; }; f"
