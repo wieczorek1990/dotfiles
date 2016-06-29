@@ -1,66 +1,68 @@
 [alias]
+  a = add
+  aa = add --all
   amend = commit --amend
   authors = !git log --all --format='%cN <%cE>' | sort -u
-  a = add
+  b = branch
   ba = branch -a
   bd = branch -d
-  bdd = branch -D
+  bdf = branch -D
   bm = branch -m
   bn = checkout -b
   br = branch -r
-  bup = branch --set-upstream-to origin
-  b = branch
-  ca = commit -a -m
-  chx = update-index --chmod=+x
-  clean = clean -dfx
-  clr = checkout -- .
-  cl = clone
-  co = checkout
-  con = branch --contains
-  cp = cherry-pick
-  cnc = reset @^
-  cm = commit -m
   c = commit
+  ca = commit -a -m
+  cl = clone
+  cln = !git clean -dfnx && echo 'Are you sure?' && read && git clean -dfx
+  clr = checkout @ -- .
+  cm = commit -m
+  co = checkout
+  contains = branch --contains
+  cp = cherry-pick
+  d = diff
+  da = diff @
   dc = diff --cached
+  discard = !git reset @ -- . && git checkout @ -- .
   ds = diff stash@{0}
   dt = difftool
-  d = diff
+  hash = rev-parse --short @
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
   ls = log --graph --oneline --decorate
-  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  master = !git co master && git pu && git pl develop && git p && git co develop
-  msg = log -n 1 --pretty=format:%s
-  me = branch --merged
-  mt = mergetool
   m = merge
-  nme = branch --no-merged
-  orig = "f() { dir=~/Projects/orig/`date`; mkdir -p $dir; find . -name '*.orig' | parallel -X mv '{}' $dir; }; f"
-  pf = push -u origin
-  pm = push origin master
-  pr = pull --rebase origin
-  pu = pull origin
-  pc = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git pull origin $HEAD; }; f"
-  pl = pull .
+  merged = branch --merged
+  msg = log -n 1 --pretty=format:%s
+  mt = mergetool
+  notmerged = branch --no-merged
   p = push origin
+  pf = push --force
+  pt = push -u origin
+  pu = pull origin
+  puc = "!f(){ HEAD=`git rev-parse --abbrev-ref @`; git pull origin \"${HEAD}\"; }; f"
+  pul = pull .
+  pur = pull --rebase origin
+  r = !rm -r
   ra = rebase --abort
   rc = rebase --continue
-  re = checkout HEAD --
+  rst = reset @ -- .
+  rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
+  restore = checkout @ --
+  rf = !rm -rf
   ri = rebase --interactive --committer-date-is-author-date
-  rmc = rm -r --cached
-  rst = reset HEAD --
-  rrst = "!f() { HEAD=`git rev-parse --abbrev-ref HEAD`; git reset --hard \"origin/$HEAD\"; }; f"
-  short = rev-parse --short
+  s = status
+  st = stash
   sta = stash apply --index
   std = stash drop
   stl = stash list
   stp = stash pop --index
   sts = stash save
-  st = stash
   stua = !git stash show -p | git apply -R
-  s = status
-  undo = reset --soft HEAD~1
-  up = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co develop && git pu develop && git pu $HEAD; git p; }; f"
-  upm = "!f(){ HEAD=`git rev-parse --abbrev-ref HEAD`; git p; git co master && git pu master && git pu $HEAD; git p; }; f"
+  undo = reset --soft @~1
+  untracked = clean -fx
+  upstream = branch --set-upstream-to origin
+  vi = !vim
+  x = update-index --chmod=+x
 [core]
   autocrlf = input
   fileMode = false
@@ -72,11 +74,12 @@
   path = ~/.gituser
   path = ~/.gitlocal
 [merge]
-  tool = mymeld
   conflictstyle = diff3
+  tool = mymeld
 [mergetool]
   keepBackup = false
 [mergetool "mymeld"]
   cmd = meld $LOCAL $BASE $REMOTE --output $MERGED
 [push]
   default = current
+
