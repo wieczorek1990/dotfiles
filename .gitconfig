@@ -25,7 +25,7 @@
   discard = !git reset @ -- . && git checkout @ -- .
   ds = diff stash@{0}
   dt = difftool
-  frame = fame --by-type --branch=develop
+  f = fame --by-type --branch=develop
   hash = rev-parse --short @
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   less = !less -R
