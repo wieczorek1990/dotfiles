@@ -50,7 +50,7 @@
   rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
   restore = checkout @ --
   rf = !rm -rf
-  ri = rebase --interactive --committer-date-is-author-date
+  ri = rebase --interactive --committer-date-is-author-date --preserve-merges
   s = status
   st = stash
   sta = stash apply --index
