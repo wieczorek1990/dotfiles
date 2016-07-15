@@ -12,6 +12,7 @@
   br = branch -r
   c = commit
   ca = commit -a -m
+  cd = cherry -v develop
   cl = clone
   cln = !git clean -dfnx && echo 'Are you sure?' && read _ && git clean -dfx
   clr = checkout @ -- .
