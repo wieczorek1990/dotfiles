@@ -59,6 +59,7 @@
   stl = stash list
   stp = stash pop --index
   sts = stash save
+  stsh = show stash@{0}
   stua = !git stash show -p | git apply -R
   undo = reset --soft @~1
   untracked = clean -fx
