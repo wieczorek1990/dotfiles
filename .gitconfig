@@ -56,6 +56,7 @@
   s = status
   st = stash
   sta = stash apply --index
+  stats = diff --stat
   std = stash drop
   stl = stash list
   stp = stash pop --index
