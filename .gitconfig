@@ -70,6 +70,7 @@
   x = update-index --chmod=+x
 [core]
   autocrlf = input
+  eol = lf
   fileMode = false
 [diff]
   tool = meld
