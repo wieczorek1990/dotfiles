@@ -66,10 +66,9 @@
   undo = reset --soft @~1
   untracked = clean -fx
   upstream = branch --set-upstream-to origin
-  vi = !vim
   x = update-index --chmod=+x
 [core]
-  autocrlf = input
+  autocrlf = false
   eol = lf
   fileMode = false
 [diff]
