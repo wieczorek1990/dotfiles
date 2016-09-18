@@ -11,4 +11,11 @@ noremap! <Right> <Esc>
 
 set clipboard=unnamedplus
 set colorcolumn=120
+set expandtab
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:․
+set list
+set number
+set shiftwidth=2
+set tabstop=2
 set wrap
+
