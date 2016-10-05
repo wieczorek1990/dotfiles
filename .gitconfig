@@ -39,6 +39,7 @@
   mt = mergetool
   notmerged = branch --no-merged
   p = push origin
+  patch = show -p
   pf = push --force
   pt = push -u origin
   pu = pull origin
