@@ -66,6 +66,7 @@
   stua = !git stash show -p | git apply -R
   undo = reset --soft @~1
   untracked = clean -fx
+  up = !git add --all && git commit --amend --no-edit && git push --force
   upstream = branch --set-upstream-to origin
   x = update-index --chmod=+x
 [core]
