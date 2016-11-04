@@ -22,7 +22,7 @@ noremap  <Right> ""
 noremap! <Right> <Esc>
 
 set clipboard=unnamedplus
-set colorcolumn=96
+set colorcolumn=80
 set expandtab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:․
 set list
