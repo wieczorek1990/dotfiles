@@ -40,7 +40,7 @@
   notmerged = branch --no-merged
   p = push origin
   patch = show -p
-  pf = push --force
+  pf = push --force-with-lease
   pt = push -u origin
   pu = pull origin
   puc = "!f(){ HEAD=`git rev-parse --abbrev-ref @`; git pull origin \"${HEAD}\"; }; f"
