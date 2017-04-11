@@ -29,6 +29,7 @@
   f = fetch --all --prune
   fa = fame --by-type --branch=develop
   hash = rev-parse --short @
+  i = update-index --assume-unchanged
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
@@ -41,6 +42,7 @@
   p = push origin
   patch = show -p
   pf = push --force-with-lease
+  pr = !git checkout develop && git pull origin develop && git checkout - && git rebase develop --committer-date-is-author-date --preserve-merges && git push --force-with-lease
   pt = push -u origin
   pu = pull origin
   puc = "!f(){ HEAD=`git rev-parse --abbrev-ref @`; git pull origin \"${HEAD}\"; }; f"
@@ -64,6 +66,7 @@
   sts = stash save
   stsh = show stash@{0}
   stua = !git stash show -p | git apply -R
+  ui = update-index --no-assume-unchanged
   undo = reset --soft @~1
   untracked = clean -fx
   up = !git add --all && git commit --amend --no-edit && git push --force
