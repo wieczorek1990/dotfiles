@@ -48,7 +48,7 @@
   puc = "!f(){ HEAD=`git rev-parse --abbrev-ref @`; git pull origin \"${HEAD}\"; }; f"
   pul = pull .
   pur = pull --rebase origin
-  r = !rm -r
+  r = rebase
   ra = rebase --abort
   rc = rebase --continue
   rst = reset @ -- .
