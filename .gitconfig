@@ -12,7 +12,6 @@
   br = branch -r
   c = commit
   ca = commit -a -m
-  cap = "!message="$1"; f() { git commit -a -m "$message" && git push origin; }; f"
   cd = cherry -v develop
   cl = clone
   cln = !git clean -dfnx && echo 'Are you sure?' && read _ && git clean -dfx
