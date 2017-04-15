@@ -12,7 +12,6 @@
   br = branch -r
   c = commit
   ca = commit -a -m
-  cd = cherry -v develop
   cl = clone
   cln = !git clean -dfnx && echo 'Are you sure?' && read _ && git clean -dfx
   clr = checkout @ -- .
@@ -39,15 +38,14 @@
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
   notmerged = branch --no-merged
-  p = push origin
+  p = push
   patch = show -p
   pf = push --force-with-lease
   pr = !git checkout develop && git pull origin develop && git checkout - && git rebase develop --committer-date-is-author-date --preserve-merges && git push --force-with-lease
   pt = push -u origin
-  pu = pull origin
-  puc = "!f(){ HEAD=`git rev-parse --abbrev-ref @`; git pull origin \"${HEAD}\"; }; f"
+  pu = pull
   pul = pull .
-  pur = pull --rebase origin
+  pur = pull --rebase
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
