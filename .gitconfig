@@ -64,6 +64,7 @@
   sts = stash save
   stsh = show stash@{0}
   stua = !git stash show -p | git apply -R
+  t = push origin --tags
   ui = update-index --no-assume-unchanged
   undo = reset --soft @~1
   untracked = clean -fx
