@@ -1,3 +1,0 @@
-$include /etc/inputrc
-set mark-symlinked-directories on
-"\e[3;3~": kill-word
