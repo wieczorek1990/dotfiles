@@ -41,6 +41,7 @@
   mt = mergetool
   notmerged = branch --no-merged
   p = push
+  po = push origin
   patch = show -p
   pf = push --force-with-lease
   pr = !git checkout master && git pull origin master && git checkout - && git rebase master --committer-date-is-author-date --preserve-merges && git push --force-with-lease
