@@ -35,7 +35,8 @@
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
   ls = log --graph --oneline --decorate
-  m = merge --no-ff
+  m = merge
+  mm = merge --no-ff
   merged = branch --merged
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
