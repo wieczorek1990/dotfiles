@@ -13,7 +13,7 @@
   c = commit
   ca = commit -a -m
   cl = clone
-  cln = !git clean -dfnx && echo 'Are you sure?' && read _ && git clean -dfx
+  cln = !git clean -dfnx -e /.idea/ && echo 'Are you sure?' && read _ && git clean -dfx -e /.idea/
   clr = checkout @ -- .
   cm = commit -m
   co = checkout
