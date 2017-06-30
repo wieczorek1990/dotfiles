@@ -74,7 +74,7 @@
   undo = reset --soft @~1
   untracked = clean -fx
   up = !git add --all && git commit --amend --no-edit && git push --force
-  upstream = branch --set-upstream-to origin
+  upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
   x = update-index --chmod=+x
 [core]
   autocrlf = false
