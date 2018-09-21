@@ -20,6 +20,7 @@
   co = checkout
   contains = branch --contains
   cp = cherry-pick
+  cpa = cherry-pick --abort
   d = diff
   da = diff @
   dc = diff --cached
