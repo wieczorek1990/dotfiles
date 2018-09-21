@@ -12,6 +12,7 @@
   br = branch -r
   c = commit
   ca = commit -a -m
+  cb = rev-parse --abbrev-ref @
   cl = clone
   cln = !git clean -dfnx -e /.idea/ && echo 'Are you sure?' && read _ && git clean -dfx -e /.idea/
   clr = checkout @ -- .
