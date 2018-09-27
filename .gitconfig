@@ -56,6 +56,7 @@
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
+  rvc = revert --continue
   rst = reset @ -- .
   rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
   restore = checkout @ --
