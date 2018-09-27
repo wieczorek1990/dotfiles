@@ -39,15 +39,15 @@
   ls = log --graph --oneline --decorate
   m = merge
   ma = merge --abort
-  mm = merge --no-ff
   merged = branch --merged
+  mm = merge --no-ff
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
   notmerged = branch --no-merged
   p = push
-  po = push origin
   patch = show -p
   pf = push --force-with-lease
+  po = push origin
   pr = !git checkout master && git pull origin master && git checkout - && git rebase master --committer-date-is-author-date --preserve-merges && git push --force-with-lease
   pt = push -u origin
   pu = pull
@@ -56,12 +56,12 @@
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
-  rvc = revert --continue
-  rst = reset @ -- .
-  rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
   restore = checkout @ --
   rf = !rm -rf
   ri = rebase --interactive --committer-date-is-author-date --preserve-merges
+  rst = reset @ -- .
+  rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
+  rvc = revert --continue
   s = status
   st = stash
   sta = stash apply --index
