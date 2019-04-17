@@ -58,7 +58,7 @@
   rc = rebase --continue
   restore = checkout @ --
   rf = !rm -rf
-  ri = rebase --interactive --committer-date-is-author-date --preserve-merges
+  ri = rebase --interactive --preserve-merges
   rst = reset @ -- .
   rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
   rvc = revert --continue
