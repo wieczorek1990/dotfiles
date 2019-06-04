@@ -49,7 +49,7 @@
   pf = push --force-with-lease
   po = push origin
   pr = !git checkout master && git pull origin master && git checkout - && git rebase master --committer-date-is-author-date --preserve-merges && git push --force-with-lease
-  pt = push -u origin
+  pt = push --tags
   pu = pull
   pul = pull .
   pur = pull --rebase
