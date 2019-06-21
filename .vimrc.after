@@ -32,4 +32,6 @@ set tabstop=2
 set wrap
 
 syntax on
+set background=light
+colorscheme solarized
 filetype plugin indent on
