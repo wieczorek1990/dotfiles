@@ -78,7 +78,6 @@
   upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
   vi = !vi
   vim = !vim
-  x = update-index --chmod=+x
 [core]
   autocrlf = false
   eol = lf
