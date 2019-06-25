@@ -1,3 +1,4 @@
+
 [alias]
   a = add
   aa = add --all
@@ -23,19 +24,19 @@
   cpa = cherry-pick --abort
   d = diff
   da = diff @
+  db = push --delete origin
   dc = diff --cached
-  del = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git checkout develop; git pull; git branch -d $HEAD; }; f"
   discard = !git reset @ -- . && git checkout @ -- .
   ds = diff stash@{0}
   dt = push --delete origin
   f = fetch --all --prune
-  fa = fame --by-type --branch=develop
+  fa = fame --by-type --branch=development
   hash = rev-parse --short @
-  i = update-index --assume-unchanged
+  ignore = !vim .git/info/exclude
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  la = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -1
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
+  lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -1
   ls = log --graph --oneline --decorate
   m = merge
   ma = merge --abort
@@ -53,31 +54,29 @@
   pu = pull
   pul = pull .
   pur = pull --rebase
-  r = rebase
+  r = reset @ -- .
   ra = rebase --abort
   rc = rebase --continue
   restore = checkout @ --
   rf = !rm -rf
   ri = rebase --interactive --rebase-merges
-  rst = reset @ -- .
   rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
-  rvc = revert --continue
   s = status
+  sst = show stash@{0}
   st = stash
   sta = stash apply --index
   stats = diff --stat
   std = stash drop
   stl = stash list
-  stp = stash pop --index
+  stp = stash pop
+  stpi = stash pop --index
   sts = stash save
-  stsh = show stash@{0}
   stua = !git stash show -p | git apply -R
-  t = push origin --tags
-  ui = update-index --no-assume-unchanged
   undo = reset --soft @~1
-  untracked = clean -fx
   up = !git add --all && git commit --amend --no-edit && git push --force
   upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
+  vi = !vi
+  vim = !vim
   x = update-index --chmod=+x
 [core]
   autocrlf = false
@@ -87,16 +86,20 @@
   tool = meld
 [difftool]
   prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
 [include]
   path = ~/.gituser
   path = ~/.gitlocal
 [merge]
   conflictstyle = diff3
-  tool = mymeld
+  tool = meld
 [mergetool]
+  prompt = false
   keepBackup = false
-[mergetool "mymeld"]
-  cmd = meld $LOCAL $BASE $REMOTE --output $MERGED
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
 [push]
   default = current
-
