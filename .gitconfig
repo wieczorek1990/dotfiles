@@ -27,7 +27,7 @@
   del = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git checkout develop; git pull; git branch -d $HEAD; }; f"
   discard = !git reset @ -- . && git checkout @ -- .
   ds = diff stash@{0}
-  dt = difftool
+  dt = push --delete origin
   f = fetch --all --prune
   fa = fame --by-type --branch=develop
   hash = rev-parse --short @
