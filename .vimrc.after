@@ -28,8 +28,8 @@ set expandtab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:․
 set list
 set number
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set wrap
 
 syntax on
