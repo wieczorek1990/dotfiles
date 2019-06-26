@@ -58,6 +58,7 @@
   ra = rebase --abort
   rc = rebase --continue
   restore = checkout @ --
+  r = !rm
   rf = !rm -rf
   ri = rebase --interactive --rebase-merges
   rst = reset
