@@ -2,5 +2,12 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+link() {
+    ln -fs "$PWD/$1" ~/
+}
+
 cd "$DIR"
-cp -r .gitconfig .gituser .octaverc .vimrc.after ~/
+for file in .gitconfig .gituser .octaverc .vimrc.after
+do
+    link "$file"
+done
