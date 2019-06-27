@@ -31,6 +31,7 @@
   ds = diff stash@{0}
   f = fetch --all --prune
   fa = fame --by-type --branch=development
+  fg = log --all  --
   hash = rev-parse --short @
   ignore = !vim .git/info/exclude
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
