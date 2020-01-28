@@ -34,5 +34,5 @@ set wrap
 
 syntax on
 set background=light
-colorscheme solarized
+" colorscheme solarized
 filetype plugin indent on
