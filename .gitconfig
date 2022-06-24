@@ -68,6 +68,7 @@
   sst = show stash@{0}
   st = stash
   sta = stash apply --index
+  stand = standup -a 'all'
   stats = diff --stat
   std = stash drop
   stl = stash list
@@ -106,3 +107,5 @@
   cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
 [push]
   default = current
+[init]
+  deafultBranch = main
