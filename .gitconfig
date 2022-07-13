@@ -108,4 +108,4 @@
 [push]
   default = current
 [init]
-  deafultBranch = main
+  defaultBranch = main
