@@ -46,7 +46,8 @@
   msg = log -n 1 --pretty=format:%s
   mt = mergetool
   notmerged = branch --no-merged
-  p = push
+  p = push -o ci.skip
+  pb = push
   patch = show -p
   pf = push --force-with-lease
   po = push origin
