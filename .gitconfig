@@ -13,6 +13,7 @@
   br = branch -r
   c = commit
   ca = commit -a -m
+  cat = !cat
   cb = rev-parse --abbrev-ref @
   cl = clone
   cln = !git clean -dfnx -e /.idea/ && echo 'Are you sure?' && read _ && git clean -dfx -e /.idea/
@@ -24,7 +25,6 @@
   cpa = cherry-pick --abort
   d = diff
   da = diff @
-  db = push --delete origin
   dc = diff --cached
   del = push --delete origin
   discard = !git reset @ -- . && git checkout @ -- .
@@ -33,7 +33,7 @@
   fa = fame --by-type --branch=development
   fg = log --all  --
   hash = rev-parse --short @
-  ignore = !vim .git/info/exclude
+  ignore = !vi .git/info/exclude
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
@@ -44,14 +44,12 @@
   merged = branch --merged
   mm = merge --no-ff
   msg = log -n 1 --pretty=format:%s
-  mt = mergetool
   notmerged = branch --no-merged
   p = push -o ci.skip
   pb = push
   patch = show -p
-  pf = push --force-with-lease
-  po = push origin
-  pr = !git checkout master && git pull origin master && git checkout - && git rebase master --committer-date-is-author-date --preserve-merges && git push --force-with-lease
+  pf = push --force-with-lease -o ci.skip
+  po = push origin -o ci.skip
   pt = push --tags
   pu = pull
   pul = pull .
@@ -79,33 +77,16 @@
   stua = !git stash show -p | git apply -R
   td = tag -d
   undo = reset --soft @~1
-  up = !git add --all && git commit --amend --no-edit && git push --force
+  up = !git add --all && git commit --amend --no-edit && git push --force -o ci.skip
   upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
   vi = !vi
-  vim = !vim
 [core]
   autocrlf = false
   eol = lf
   fileMode = false
-[diff]
-  tool = meld
-[difftool]
-  prompt = false
-[difftool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
 [include]
   path = ~/.gituser
   path = ~/.gitlocal
-[merge]
-  conflictstyle = diff3
-  tool = meld
-[mergetool]
-  prompt = false
-  keepBackup = false
-[mergetool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
 [push]
   default = current
 [init]
