@@ -54,13 +54,11 @@
   pu = pull
   pul = pull .
   pur = pull --rebase
-  r = rebase
+  r = rm -fr
   ra = rebase --abort
   rc = rebase --continue
   restore = checkout @ --
-  rf = !rm -rf
   ri = rebase --interactive --rebase-merges
-  rm = !rm
   rst = reset
   rstf = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git reset --hard \"origin/${HEAD}\"; }; f"
   s = status
