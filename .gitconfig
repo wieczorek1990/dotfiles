@@ -54,7 +54,7 @@
   pu = pull
   pul = pull .
   pur = pull --rebase
-  r = rm -fr
+  r = !rm -fr
   ra = rebase --abort
   rc = rebase --continue
   restore = checkout @ --
