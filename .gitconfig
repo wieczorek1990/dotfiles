@@ -49,6 +49,7 @@
   pb = push
   patch = show -p
   pf = push --force-with-lease -o ci.skip
+  pfb = push --force-with-lease
   po = push origin -o ci.skip
   pt = push --tags
   pu = pull
