@@ -1,5 +1,6 @@
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="/usr/local/opt/python@3.10/libexec/bin:$PATH"
 export PATH="$HOME/Software/sonar-scanner/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
