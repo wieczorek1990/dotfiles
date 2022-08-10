@@ -1,13 +1,13 @@
 #!/bin/bash
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 link() {
     ln -fs "$PWD/$1" ~/
 }
 
 cd "$DIR"
-for file in .gitconfig .gituser .octaverc .vimrc
+for file in .gitconfig .gituser .octaverc .vimrc .zshrc
 do
     link "$file"
 done

@@ -22,7 +22,11 @@ noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
 
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 set colorcolumn=80
 set expandtab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:․
