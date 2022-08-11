@@ -66,6 +66,7 @@
   stats = diff --stat
   std = stash drop
   stl = stash list
+  stp = stash pop
   sts = stash save
   stua = !git stash show -p | git apply -R
   td = tag -d
