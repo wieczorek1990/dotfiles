@@ -32,6 +32,7 @@
   fa = fame --by-type
   hash = rev-parse --short @
   ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
