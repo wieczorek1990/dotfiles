@@ -31,7 +31,7 @@
   f = fetch --all --prune
   fa = fame --by-type
   hash = rev-parse --short @
-  ignore = !vi .git/info/exclude
+  ignore = update-index --assume-unchanged
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   less = !less -R
   lm = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --author='Łukasz Wieczorek' --date=relative
@@ -85,3 +85,8 @@
   default = current
 [init]
   defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
