@@ -4,9 +4,11 @@ export PATH="/usr/local/opt/python@3.10/libexec/bin:$PATH"
 
 alias init='ssh-add'
 alias serve='python -m http.server 80'
+alias update='source ~/Software/luca-backend-ve/bin/activate && cd ~/Software/luca/backend/ && ./bin/local && deactivate'
 
 alias g='./bin/guard'
 alias r='./bin/run'
+alias s='./bin/shell'
 alias t='./bin/test'
 alias l='cd ~/Software/luca/backend/'
 
