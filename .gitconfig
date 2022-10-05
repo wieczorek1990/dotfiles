@@ -76,6 +76,8 @@
   up = !git add --all && git commit --amend --no-edit && git push --force -o ci.skip
   upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
   vi = !vi
+  # Commands using shortcuts
+  staging = !git co staging && git pul main && git pb && git co -
 [core]
   autocrlf = false
   eol = lf
@@ -88,7 +90,7 @@
 [init]
   defaultBranch = main
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
