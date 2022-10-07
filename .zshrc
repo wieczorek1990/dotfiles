@@ -1,6 +1,7 @@
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/libexec/bin:$PATH"
+export PATH="/Users/luke/.local/bin:$PATH"
 
 alias init='ssh-add'
 alias serve='python -m http.server 80'
