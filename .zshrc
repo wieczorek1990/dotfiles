@@ -11,9 +11,10 @@ alias b='./bin/bash'
 alias f='./bin/format'
 alias g='./bin/guard'
 alias gl='./bin/guard --no-lint'
+alias l='cd ~/Software/luca/backend/'
 alias r='./bin/run'
 alias s='./bin/shell'
 alias t='./bin/test'
-alias l='cd ~/Software/luca/backend/'
+alias u='./bin/update'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
