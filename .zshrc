@@ -7,6 +7,7 @@ alias serve='python -m http.server 80'
 alias update='source ~/Software/luca-backend-ve/bin/activate && cd ~/Software/luca/backend/ && ./bin/local && deactivate'
 
 alias b='./bin/bash'
+alias f='./bin/format'
 alias g='./bin/guard'
 alias gl='./bin/guard --no-lint'
 alias r='./bin/run'
