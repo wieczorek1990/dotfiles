@@ -9,7 +9,9 @@ alias update='source ~/Software/luca-backend-ve/bin/activate && cd ~/Software/lu
 
 alias b='./bin/bash'
 alias be='cd ~/Software/luca/backend/'
+alias devops='cd ~/Software/luca/devops/'
 alias f='./bin/format'
+alias fe='cd ~/Software/luca/frontend/'
 alias fix='./bin/imports && ./bin/format'
 alias g='./bin/guard'
 alias l='./bin/lint'
