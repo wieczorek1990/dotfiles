@@ -82,6 +82,8 @@
   autocrlf = false
   eol = lf
   fileMode = false
+  quotePath = false
+  precomposeunicode = true
 [include]
   path = ~/.gituser
   path = ~/.gitlocal
