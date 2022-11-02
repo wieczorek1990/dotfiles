@@ -1,7 +1,7 @@
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/python@3.10/bin:$PATH"
-export PATH="/usr/local/opt/python@3.10/libexec/bin:$PATH"
 export PATH="/Users/luke/.local/bin:$PATH"
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 alias init='ssh-add'
 alias server='python -m http.server 80'
@@ -21,7 +21,21 @@ alias mm='./bin/makemigrations'
 alias r='./bin/run'
 alias re='./bin/restart'
 alias s='./bin/shell'
+alias st='./bin/style'
 alias t='./bin/test'
+alias ty='./bin/type'
 alias u='./bin/update'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/Software/google-cloud-sdk/path.zsh.inc" && source "${HOME}/Software/google-cloud-sdk/path.zsh.inc"
+
+current_project=$(cat .current_project)
+
+function rlist {
+    kubectl get pod -n $current_project
+}
+
+function rbash {
+    id=$(kubectl get pod -n $current_project | tail -n +2 | tr -s ' ' | cut -d ' ' -f 1 | grep "$1")
+    kubectl exec -it -n $current_project "$id" -- bash
+}
