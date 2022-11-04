@@ -30,22 +30,23 @@ test -e "${HOME}/Software/google-cloud-sdk/path.zsh.inc" && source "${HOME}/Soft
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-current_project=$(cat ".current_project")
+source ".project"
 
 function rlogin {
     gcloud auth login
+    gcloud container clusters get-credentials "$CLUSTER" --region "$REGION"
 }
 
 function rlogout {
-    gcloud auth revoke "lukasz.wieczorek@stermedia.eu"
+    gcloud auth revoke $EMAIL
 }
 
 function rlist {
-    kubectl get pod -n "$current_project"
+    kubectl get pod -n "$PROJECT"
 }
 
 function rbash {
     pod="$1"
-    id=$(kubectl get pod -n "$current_project" | tail -n +2 | tr -s " " | cut -d " " -f 1 | grep "$pod")
-    kubectl exec -it -n "$current_project" "$id" -- bash
+    id=$(kubectl get pod -n "$PROJECT" | tail -n +2 | tr -s " " | cut -d " " -f 1 | grep "$pod")
+    kubectl exec -it -n "$PROJECT" "$id" -- bash
 }
