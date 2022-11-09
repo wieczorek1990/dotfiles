@@ -80,7 +80,7 @@
   # Commands using shortcuts
   staging = !git co staging && git pul main && git pb && git co -
 [core]
-  autocrlf = true
+  autocrlf = false
   eol = lf
   fileMode = false
   quotePath = false
