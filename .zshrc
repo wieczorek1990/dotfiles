@@ -31,7 +31,7 @@ test -e "${HOME}/Software/google-cloud-sdk/path.zsh.inc" && source "${HOME}/Soft
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-source ".project"
+source "${HOME}/.project"
 
 function rlogin {
     gcloud auth login
