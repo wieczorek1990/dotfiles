@@ -1,4 +1,4 @@
-export PATH="/Users/luke/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 alias init="ssh-add"
 alias server="python -m http.server 80"
