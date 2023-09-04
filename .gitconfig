@@ -24,6 +24,7 @@
   cp = cherry-pick
   cpa = cherry-pick --abort
   d = diff
+  date = !date
   dc = diff --cached
   del = push --delete origin
   discard = !git reset @ -- . && git checkout @ -- .
