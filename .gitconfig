@@ -2,7 +2,7 @@
 [alias]
   a = add
   aa = add --all
-  amend = commit --amend
+  amend = commit --amend --reset-author
   authors = !git log --all --format='%cN <%cE>' | sort -u
   b = branch
   ba = branch -a
@@ -75,6 +75,7 @@
   stua = !git stash show -p | git apply -R
   td = tag -d
   undo = reset --soft @~1
+  unresolve = checkout --conflict=merge
   up = !git add --all && git commit --amend --no-edit && git push --force -o ci.skip
   upstream = "!f() { HEAD=`git rev-parse --abbrev-ref @`; git branch --set-upstream-to=origin/$HEAD $HEAD; }; f"
   vi = !vi

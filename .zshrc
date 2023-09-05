@@ -1,4 +1,5 @@
-export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/opt/libpq/bin:${PATH}"
+export LIBRARY_PATH="${HOME}/.local/lib:${LIBRARY_PATH}"
 
 alias init="ssh-add"
 alias server="python -m http.server 80"
