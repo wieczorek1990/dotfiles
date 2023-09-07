@@ -1,12 +1,14 @@
+source "${HOME}/.project"
+
 export PATH="${HOME}/.local/bin:${HOME}/.local/opt/libpq/bin:${PATH}"
 export LIBRARY_PATH="${HOME}/.local/lib:${LIBRARY_PATH}"
 
 alias init="ssh-add"
 alias server="python -m http.server 80"
-alias update="source ~/Software/luca-backend-ve/bin/activate && cd ~/Software/luca/backend/ && ./bin/local && deactivate"
+alias update="source ~/Software/${PROJECT}/venv/bin/activate && cd ~/Software/${PROJECT}/ && ./${SRC}/bin/install && deactivate"
 
 alias b="./bin/bash"
-alias be="cd ~/Software/pismo-swiete-backend/web/"
+alias be="cd ~/Software/${PROJECT}/"
 alias f="./bin/format"
 alias fix="./bin/sort_imports && ./bin/format"
 alias g="./bin/guard"
@@ -30,8 +32,6 @@ test -e "${HOME}/Software/google-cloud-sdk/path.zsh.inc" && source "${HOME}/Soft
 # Kubernetes
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-source "${HOME}/.project"
 
 function rlogin {
     gcloud auth login
