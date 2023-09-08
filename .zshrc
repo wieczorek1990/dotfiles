@@ -23,7 +23,7 @@ alias re="./bin/restart"
 alias s="./bin/shell"
 alias st="./bin/style"
 alias t="./bin/test"
-alias ty="./bin/type"
+alias ty="./bin/typing"
 alias u="./bin/update"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
