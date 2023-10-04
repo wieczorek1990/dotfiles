@@ -47,11 +47,11 @@
   mm = merge --no-ff
   msg = log -n 1 --pretty=format:%s
   notmerged = branch --no-merged
-  p = push -o ci.skip
-  pb = push
+  p = push
   patch = show -p
-  pf = push --force-with-lease -o ci.skip
-  pfb = push --force-with-lease
+  pf = push --force-with-lease
+  ps = push -o ci.skip
+  psf = push -o ci.skip --force-with-lease
   pt = push --tags
   pu = pull
   pul = pull .
