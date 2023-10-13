@@ -1,11 +1,7 @@
 source "${HOME}/.project"
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/opt/libpq/bin:${PATH}"
-export LIBRARY_PATH="${HOME}/.local/lib:${LIBRARY_PATH}"
-
 alias init="ssh-add"
 alias server="python -m http.server 80"
-alias update="source ~/Software/${PROJECT}/venv/bin/activate && cd ~/Software/${PROJECT}/ && ./${SRC}/bin/install && deactivate"
 
 alias b="./bin/bash"
 alias be="cd ~/Software/${PROJECT}/"
@@ -25,9 +21,6 @@ alias st="./bin/style"
 alias t="./bin/test"
 alias ty="./bin/typing"
 alias u="./bin/update"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "${HOME}/Software/google-cloud-sdk/path.zsh.inc" && source "${HOME}/Software/google-cloud-sdk/path.zsh.inc"
 
 # Kubernetes
 
