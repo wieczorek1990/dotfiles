@@ -6,5 +6,5 @@ My dotfiles.
 ## Installation
 
 ```
-git clone https://github.com/wieczorek1990/dotfiles.git && ./dotfiles/install
+git clone git@github.com:wieczorek1990/dotfiles.git && ./dotfiles/install
 ```
