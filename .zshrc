@@ -1,5 +1,7 @@
 source "${HOME}/.project"
 
+export PATH="/Users/lukaszwieczorek/.local/opt/ruby/bin:$PATH"
+
 alias init="ssh-add"
 alias server="python -m http.server 80"
 alias be="cd ~/Software/${PROJECT}/"
