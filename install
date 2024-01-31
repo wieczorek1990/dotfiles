@@ -7,7 +7,7 @@ link() {
 }
 
 cd "$DIR"
-for file in .gitconfig .gituser .octaverc .vimrc .zshrc
+for file in .gitconfig .gituser .octaverc .vimrc .zprofile .zshrc
 do
     link "$file"
 done
