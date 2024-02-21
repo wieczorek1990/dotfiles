@@ -11,3 +11,4 @@ for file in .gitconfig .gituser .octaverc .vimrc .zprofile .zshrc
 do
     link "$file"
 done
+ln -fs "$PWD/config.fish" ~/.config/fish/
