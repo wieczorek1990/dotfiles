@@ -1,10 +1,8 @@
 source "${HOME}/.project"
 
-export PATH="/usr/local/lib/ruby/gems/3.3.0/bin:/usr/local/opt/ruby/bin:$PATH"
-
+alias be="cd ~/Software/${PROJECT}/"
 alias init="ssh-add"
 alias server="python -m http.server 80"
-alias be="cd ~/Software/${PROJECT}/"
 
 # Kubernetes
 
