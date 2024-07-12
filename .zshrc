@@ -2,6 +2,7 @@ source "${HOME}/.project"
 
 alias be="cd ~/Software/${PROJECT}/"
 alias init="ssh-add"
+alias techs="ssh-add ~/.ssh/id_rsa-techs"
 alias server="python -m http.server 80"
 
 # Kubernetes
