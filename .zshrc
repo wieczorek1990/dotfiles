@@ -1,5 +1,9 @@
 source "${HOME}/.project"
 
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libpq/lib"
+export CPPFLAGS="-I/usr/local/opt/libpq/include"
+
 alias be="cd ~/Software/${PROJECT}"
 alias init="ssh-add ~/.ssh/id_rsa${SSH_KEY_POSTFIX}"
 alias server="python -m http.server 80"
