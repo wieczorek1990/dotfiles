@@ -1,6 +1,7 @@
 source "${HOME}/.project"
 
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/libpq/lib"
 export CPPFLAGS="-I/usr/local/opt/libpq/include"
 
