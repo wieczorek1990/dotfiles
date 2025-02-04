@@ -4,6 +4,8 @@ set PATH\
     /usr/local/opt/node@20/bin\
     /Applications/Postgres.app/Contents/Versions/16/bin\
     $PATH
+set RUBY_TCP_NO_FAST_FALLBACK 1
+set HOMEBREW_NO_ENV_HINTS 1
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
