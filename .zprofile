@@ -8,7 +8,3 @@ else
         eval "$(/usr/local/bin/brew shellenv)"
     fi
 fi
-
-# Binaries
-PATH="/Applications/fish-4.0b1.app/Contents/Resources/base/usr/local/bin:${PATH}"
-export PATH
