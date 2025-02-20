@@ -9,5 +9,6 @@ else
     fi
 fi
 
+# Binaries
 PATH="/Applications/fish-4.0b1.app/Contents/Resources/base/usr/local/bin:${PATH}"
 export PATH

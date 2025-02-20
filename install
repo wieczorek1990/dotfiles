@@ -7,7 +7,7 @@ link() {
 }
 
 cd "$DIR"
-touch ~/.project
+touch ~/.project ~/.project.fish
 mkdir -p ~/.config/fish/
 for file in .gemrc .gitconfig .gituser .octaverc .vimrc .zprofile .zshrc
 do
