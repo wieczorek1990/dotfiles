@@ -1,7 +1,8 @@
 set -U fish_greeting
 
+set LANG "en_US.UTF-8"
 set PATH\
-    /usr/local/opt/node@20/bin\
+    ~/.cargo/bin/\
     /Applications/Postgres.app/Contents/Versions/16/bin\
     $PATH
 set RUBY_TCP_NO_FAST_FALLBACK 1
